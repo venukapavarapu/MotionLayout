@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/tools">
+
+    <Transition
+        motion:constraintSetStart="@layout/activity_main"
+        motion:constraintSetEnd="@layout/motion_layout_end"
+        motion:duration="1000">
+
+        <OnSwipe
+            motion:touchAnchorId="@id/button"
+            motion:touchAnchorSide="top"
+            motion:dragDirection="dragRight"/>
+
+    </Transition>
+
+
+    <Transition
+        motion:constraintSetStart="@layout/motion_layout_end"
+        motion:constraintSetEnd="@layout/activity_main"
+        motion:duration="1000">
+
+        <OnSwipe
+            motion:touchAnchorId="@id/button"
+            motion:touchAnchorSide="top"
+            motion:dragDirection="dragLeft"/>
+
+    </Transition>
+</MotionScene>
